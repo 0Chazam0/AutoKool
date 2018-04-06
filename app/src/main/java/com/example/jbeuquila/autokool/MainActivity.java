@@ -50,8 +50,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, Selection.class);
-                startActivity(intent);
+                final EditText ETxtNom = (EditText) findViewById(R.id.utilisateur);
+                final TextView Txtnom = (TextView) findViewById(R.id.userTitle);
+                final EditText ETxtMdp = (EditText) findViewById(R.id.mdp);
+                final TextView Txtmdp = (TextView) findViewById(R.id.mdpTitle);
+                Txtnom.setVisibility(View.VISIBLE);
+                ETxtNom.setVisibility(View.VISIBLE);
+                Txtmdp.setVisibility(View.VISIBLE);
+                ETxtMdp.setVisibility(View.VISIBLE);
+                btnValider.setVisibility(View.VISIBLE);
+                buttonAnnuler.setVisibility(View.VISIBLE);
 
             }
         });

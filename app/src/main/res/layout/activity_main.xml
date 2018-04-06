@@ -11,7 +11,8 @@
         android:layout_width="386dp"
         android:layout_height="101dp"
         app:srcCompat="@mipmap/acceuil"
-         />
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/btnSeConnecter"
