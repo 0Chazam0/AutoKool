@@ -19,6 +19,17 @@ public class Selection extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Intent intent = new Intent(Selection.this, Mission2.class);
+                startActivity(intent);
+
+            }
+        });
+
+        final Button btnJerem = (Button) findViewById(R.id.btnJerem);
+        btnJerem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
                 Intent intent = new Intent(Selection.this, Mission3.class);
                 startActivity(intent);
 
