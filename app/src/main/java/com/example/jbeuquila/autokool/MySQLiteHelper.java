@@ -13,9 +13,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
     private static final int versionBD = 1 ;
     private static final String nomBD = "autokool.db" ;
 
-    private static String requeteFormulaire = "CREATE TABLE FORMULE(CODEFORMULE INTEGER NOT NULL, LIBELLEFORMULE VARCHAR(255) NULL, FRAISADHESION DOUBLE NULL, TARIFMENSUEL DOUBLE NULL, PARTSOCIALE DOUBLE NULL, DEPOTGARANTIE DOUBLE NULL, CAUTION DOUBLE NULL, PRIMARY KEY (CODEFORMULE));";
+    private static String requeteFormule = "CREATE TABLE FORMULE(CODEFORMULE INTEGER NOT NULL, LIBELLEFORMULE VARCHAR(255) NULL, FRAISADHESION DOUBLE NULL, TARIFMENSUEL DOUBLE NULL, PARTSOCIALE DOUBLE NULL, DEPOTGARANTIE DOUBLE NULL, CAUTION DOUBLE NULL, PRIMARY KEY (CODEFORMULE));";
 
-    private static String requeteFormulaireDrop = "DROP TABLE IF EXISTS FORMULE;";
+    private static String requeteFormuleDrop = "DROP TABLE IF EXISTS FORMULE;";
 
     private static String requeteTrancheHoraire = "CREATE TABLE TRANCHE_HORAIRE (CODETRANCHEH CHAR(1) NOT NULL, DUREE DOUBLE NULL, PRIMARY KEY (CODETRANCHEH));";
 
@@ -61,10 +61,17 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(requeteContact);
-        db.execSQL(requeteGroupe);
-        db.execSQL(requeteAppartenir);
-        Log.d("Test", "Passage dans onCreate");
+        db.execSQL(requeteFormule);
+        db.execSQL(requeteAbonne);
+        db.execSQL(requeteStation);
+        db.execSQL(requeteCategorieVehicule);
+        db.execSQL(requeteTypeVehicule);
+        db.execSQL(requeteVehicule);
+        db.execSQL(requeteTrancheHoraire);
+        db.execSQL(requeteTrancheKM);
+        db.execSQL(requeteFacturer1);
+        db.execSQL(requeteFacturer2);
+        Log.d("created", "Base de données créée");
     }
 
     @Override
@@ -72,20 +79,21 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
         Log.d("Test", "Passage dans onUpgrade");
 
 
-
-
-
-
     }
 
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.d("Test", "Passage dans onDowngrade");
-
-
-
-
-
-
+        db.execSQL(requeteFacturer2Drop);
+        db.execSQL(requeteFacturer1Drop);
+        db.execSQL(requeteTrancheKMDrop);
+        db.execSQL(requeteTrancheHoraireDrop);
+        db.execSQL(requeteVehiculeDrop);
+        db.execSQL(requeteTypeVehiculeDrop);
+        db.execSQL(requeteCategorieVehiculeDrop);
+        db.execSQL(requeteStationDrop);
+        db.execSQL(requeteAbonneDrop);
+        db.execSQL(requeteFormuleDrop);
+        onCreate(db);
     }
 }
