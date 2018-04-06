@@ -57,5 +57,6 @@ public class Vehicule {
         NiveauEssence = niveauEssence;
         this.typeVehicule = typeVehicule;
         this.maStation = maStation;
+        this.maStation.getMesVehicules().add(this);
     }
 }

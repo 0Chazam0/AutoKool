@@ -1,5 +1,7 @@
 package com.example.jbeuquila.autokool;
 
+import java.util.List;
+
 /**
  * Created by jbeuquila on 06/04/2018.
  */
@@ -7,6 +9,11 @@ package com.example.jbeuquila.autokool;
 public class CategorieVehicule {
     private String code;
     private String libelle;
+    private List<Vehicule> mesVehicules;
+
+    public List<Vehicule> getMesVehicules() {
+        return mesVehicules;
+    }
 
     public String getCode() {
         return code;

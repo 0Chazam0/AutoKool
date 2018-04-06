@@ -1,5 +1,7 @@
 package com.example.jbeuquila.autokool;
 
+import java.util.List;
+
 /**
  * Created by jbeuquila on 06/04/2018.
  */
@@ -12,6 +14,15 @@ public class Formule {
     private String partSociale;
     private double depotGrantie;
     private double caution;
+    private List<Abonne> mesAbonnes;
+
+    public List<Abonne> getMesAbonnes() {
+        return mesAbonnes;
+    }
+
+    public void setMesAbonnes(List<Abonne> mesAbonnes) {
+        this.mesAbonnes = mesAbonnes;
+    }
 
     public String getCode() {
         return code;
