@@ -17,7 +17,7 @@ public class Mission2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mission3);
+        setContentView(R.layout.activity_mission2);
 
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.lesCatégoriesVehicules);
