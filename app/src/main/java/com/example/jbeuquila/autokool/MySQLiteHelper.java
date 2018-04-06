@@ -61,9 +61,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(requeteContact);
-        db.execSQL(requeteGroupe);
-        db.execSQL(requeteAppartenir);
         Log.d("Test", "Passage dans onCreate");
     }
 
