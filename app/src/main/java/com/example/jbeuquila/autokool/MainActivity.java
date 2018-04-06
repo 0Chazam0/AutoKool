@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         final Button btnConnection = (Button) findViewById(R.id.btnSeConnecter);
-        btnValider.setOnClickListener(new View.OnClickListener() {
+        btnConnection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
