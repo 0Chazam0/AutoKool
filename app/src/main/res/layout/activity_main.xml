@@ -7,12 +7,23 @@
     tools:context="com.example.jbeuquila.autokool.MainActivity">
 
     <ImageView
+        android:id="@+id/imInvisible"
+        android:layout_width="386dp"
+        android:layout_height="150dp"
+        app:srcCompat="@mipmap/blanc"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:visibility = "invisible"/>
+
+    <ImageView
         android:id="@+id/imgAcceuil"
         android:layout_width="386dp"
         android:layout_height="101dp"
         app:srcCompat="@mipmap/acceuil"
+        app:layout_constraintTop_toBottomOf="@+id/imInvisible"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        />
 
     <Button
         android:id="@+id/btnSeConnecter"
@@ -27,6 +38,7 @@
         app:layout_constraintTop_toBottomOf="@id/imgAcceuil"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginStart="120dp"
+        android:visibility = "visible"
         />
 
     <TextView
