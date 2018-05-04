@@ -1,4 +1,4 @@
-package com.example.jbeuquila.autokool;
+package com.example.jbeuquila.autokool.DTO;
 
 import java.util.Date;
 

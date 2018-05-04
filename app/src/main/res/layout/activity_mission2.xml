@@ -4,26 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jbeuquila.autokool.Mission3">
+    tools:context="com.example.jbeuquila.autokool.Mission2">
 
     <TextView
-        android:id="@+id/catVehicule"
+        android:id="@+id/formuAbonnement"
         android:layout_width="wrap_content"
         android:layout_height="34dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="80dp"
         android:gravity="center_vertical"
-        android:text="Catégorie du véhicule"
+        android:text="Formule d'abonnement"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-
         android:layout_marginStart="10dp" />
 
     <Spinner
-        android:id="@+id/lesCatégoriesVehicules"
-        app:layout_constraintTop_toBottomOf="@+id/catVehicule"
+        android:id="@+id/lesFormulesAbonnements"
+        app:layout_constraintTop_toBottomOf="@+id/formuAbonnement"
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnChoixFormule"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/darker_gray"
+        android:text="GO"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/formuAbonnement" />
+
+    <Button
+        android:id="@+id/btnRetourFormule"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/darker_gray"
+        android:text="QUITTER"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/btnChoixFormule" />
+
+
 
 </android.support.constraint.ConstraintLayout>

@@ -15,6 +15,6 @@ public class AbonneDAO {
 
     public AbonneDAO(Context ct){
         SQLiteDatabase bd = accesBD.getReadableDatabase();
-    
+
     }
 }

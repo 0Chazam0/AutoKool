@@ -1,4 +1,4 @@
-package com.example.jbeuquila.autokool;
+package com.example.jbeuquila.autokool.DTO;
 
 /**
  * Created by jbeuquila on 06/04/2018.
